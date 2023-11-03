@@ -1,29 +1,27 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
-const ulEl = document.querySelector('ul')
-console.log(ulEl)
 
-for (const ingredient of ingredients) {
-  const liEl = document.createElement('li')
-  liEl.textContent = ingredient
-  liEl.classList.add('item')
-  ulEl.appendChild(liEl)
-  
-}
-document.body.prepend(ulEl)
+const ul = document.querySelector('ul')
 
-// //!!!!
-// const listContent = ingredients.map((ingredient) => `<li>${ingredient}</li>`).join('')
-//or
-// const listContent = ingredients.reduce((acc, ingredient)=> acc +  `<li>${ingredient}</li>` ,'')
+//*1
+// ingredients.forEach(ingr => {
+//   const el = document.createElement('li')
+//   el.textContent = ingr
+//   el.classList.add('item')
+//   ul.append(el)
+// }) 
+//? можна коментар, як тут краще додати все разом в HTML?
 
+//*2
+const el = ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')
+ul.insertAdjacentHTML('beforeend', el)
 
-// console.log(listContent)
-// // ? document.body.insertAdjacentHTML('afterbegin', listContent)
-// console.log(document.body)
+//*3
+// const el = ingredients.reduce((acc, el)=> acc + `<li>${el}</li>`,'')
+// ul.insertAdjacentHTML('afterbegin', el)

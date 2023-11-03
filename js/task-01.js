@@ -1,45 +1,19 @@
-const list = document.querySelectorAll('h2')
-console.log(list)
-console.log(`Number of categories: ${list.length}`)
+//*1
+// const list = document.querySelectorAll('h2')
+// console.log(`Number of categories: ${list.length}`)
+//*2
+const list = document.querySelector('#categories')
+const items = list.children
+console.log(`Number of categories: ${items.length}`)
+console.log(items)
 
-const categoryList = document.querySelector('#categories')
-console.log(categoryList)
-
-const categoryListEl = categoryList.children
-console.log(categoryListEl)
-
-console.log(`Number of categories: ${categoryListEl.length}`)
-
-const subCatList = categoryList.querySelectorAll('.item');
-console.log(subCatList)
-
-subCatList.forEach( item =>
+const item= document.querySelectorAll('.item')
+console.log(item)
+item.forEach(el=>
 {
-    const elementName = item.querySelector('h2').textContent;
-    const elementsCount = item.querySelectorAll('li').length;
-    console.log(`Category: ${elementName}`);
-    console.log(`Elements: ${elementsCount}`);
-});
-
-
-
-
-
-
-
-/*Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item.
-Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку елемента (тегу <h2>) і кількість елементів в категорії (усіх <li>, вкладених в нього).
-Для виконання цього завдання потрібно використати метод forEach() і властивості навігації по DOM.
-
-В результаті, в консолі будуть виведені наступні повідомлення.
-
-Number of categories: 3
-
-Category: Animals
-Elements: 4
-
-Category: Products
-Elements: 3
-
-Category: Technologies
-Elements: 5*/
+    console.log(el)
+    const elName = el.querySelector('h2').textContent
+    const elAmount = el.querySelectorAll('li').length
+    console.log(`Category: ${elName}`)
+    console.log(`Elements: ${elAmount}`)
+    })
