@@ -2,26 +2,42 @@ const ingredients = [
   "Potatoes",
   "Mushrooms",
   "Garlic",
-  "Tomatos",
+  "Tomatoes",
   "Herbs",
   "Condiments",
 ];
 
+
 const ul = document.querySelector('ul')
+const list = []
 
-//*1
-// ingredients.forEach(ingr => {
-//   const el = document.createElement('li')
-//   el.textContent = ingr
-//   el.classList.add('item')
-//   ul.append(el)
-// }) 
-//? можна коментар, як тут краще додати все разом в HTML?
+ingredients.forEach(ingr => {
+  const el = document.createElement('li')
+  el.textContent = ingr
+  el.classList.add('item')
+  list.push(el)
+}) 
 
-//*2
-const el = ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')
-ul.insertAdjacentHTML('beforeend', el)
+  ul.append(...list)
 
-//*3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+//---------
+// const el = ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')
+// ul.insertAdjacentHTML('beforeend', el)
+//----------
 // const el = ingredients.reduce((acc, el)=> acc + `<li>${el}</li>`,'')
 // ul.insertAdjacentHTML('afterbegin', el)

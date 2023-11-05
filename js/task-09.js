@@ -15,7 +15,7 @@ changeBtn.addEventListener('click', function () {
   bgBodyColor.style.backgroundColor = randomColor
 })
 
-//*
+//!------не розумію чому але не працює якщо додати до попереднього
 const textBgColor = document.querySelector('.widget p')
 
 changeBtn.addEventListener('click', function () {

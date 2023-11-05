@@ -14,21 +14,32 @@ const images = [
 ];
 
 const ul = document.querySelector('ul')
-//*1
-// const list = images.map(image => {
-//   const listItem = `<li><img alt = ${image.alt} src = ${image.url} ></li>`
-//   ul.insertAdjacentHTML('beforeend', listItem)
+
+const list = images.map(image => {
+  return `<li><img alt = "${image.alt}" src = "${image.url}"></li>`
+}).join('')
+
+  ul.insertAdjacentHTML('beforeend', list)
+
+
+
+
+
+
+
+
+
+
+
+  
+//--------------
+// images.forEach(image => {
+//   const listItem = document.createElement('li')
+//   const listImg = document.createElement('img')
+//   listImg.alt = image.alt
+//   listImg.src = image.url
+//   listImg.classList.add('list-img')
+
+//   listItem.appendChild(listImg)
+//   ul.appendChild(listItem)
 // })
-
-//*2
-images.forEach(image => {
-  const listItem = document.createElement('li')
-  const listImg = document.createElement('img')
-  listImg.alt = image.alt
-  listImg.src = image.url
-  listImg.classList.add('list-img')
-
-  listItem.appendChild(listImg)
-  ul.appendChild(listItem)
-
-})

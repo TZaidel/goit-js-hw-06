@@ -15,7 +15,7 @@ function onSubmit(event) {
       password: passwordForm.value
     }
     console.log(user)
+      form.reset()
   }
-  form.reset()
 }
 

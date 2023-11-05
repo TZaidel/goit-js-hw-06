@@ -7,6 +7,7 @@ function changeSpan() {
     event.preventDefault() 
     if (nameInput.value.trim() !== "") {
  nameOutput.textContent= nameInput.value
-
+    } else {
+        nameOutput.textContent='Anonymous'
     }
 }
